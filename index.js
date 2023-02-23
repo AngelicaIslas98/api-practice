@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-const routerApi = require('./routes');
+const routerApi = require('./routes/index');
+
 
 
 const { logErrors, errorHandler, boomErrorHandler } = require('./middlewares/error.handler');
@@ -30,7 +31,7 @@ app.get('/nueva-ruta', (req, res) => {
   res.send('Hola, soy una nueva ruta');
 });
 
-routerApi(app);
+//routerApi(app);
 
 
 app.use(logErrors);
