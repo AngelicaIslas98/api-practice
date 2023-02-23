@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const routerApi = require('./routes/index');
+const routerApi = require('./routes');
 
 
 
@@ -32,7 +32,6 @@ app.get('/nueva-ruta', (req, res) => {
 });
 
 //routerApi(app);
-
 
 app.use(logErrors);
 app.use(boomErrorHandler);
